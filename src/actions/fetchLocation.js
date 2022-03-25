@@ -1,25 +1,16 @@
-// ajax request to fetch data from locations
-// export const fetchLocation = async (ip) => {
-//         try {
-//             const res = await fetch(`http://localhost:3000/get_location/?ip_address=${ip}`)
-//             const data = await res.json()
-//             console.log(data, "data")
-//             return data.location.record
-//         } catch (err) {
-//             console.log(err)
-//             return null
-//         }
-// }
+// async request to fetch data using an ip address
 
-export const fetchLocation = async (ip) => {
+export const fetchLocation = async (ipAddress) => {
+    
     try {
-        const res = await fetch(`http://localhost:3000/get_location/?ip_address=${ip}`)
+        const res = await fetch(`http://127.0.0.1:3000/get_location?ip_address=${ipAddress}`)
         const data = await res.json()
-        console.log(data.record.location)
-        return data.record.location
+        console.log(data, "data from fetch")
+        console.log(data.location.record)
+        return data.location
         // return data.location.record
     } catch (err) {
-        console.log(err)
+        console.log(err, "err from fetch")
         return null
     }
 }
