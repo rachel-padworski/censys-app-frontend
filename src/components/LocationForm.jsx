@@ -8,30 +8,33 @@ export default function LocationForm() {
         longitude: '',
     });
 
-    const handleOnChange = (e) => {
-        setIpAddress({...location, [e.target.name]: e.target.value});
+
+    const OnChange = (e) => {
+        setIpAddress(e.target.value);
     };
 
     const onSubmit = async (e) => {
         e.preventDefault();
-        console.log(location.latitude)
         const location = await fetchLocation(ipAddress);
-        console.log(location.latitude)
         setLocation(location);
-
     };
-  
+
+    const onFocus = (e) => {
+        e.target.placeholder('');
+    }
+
+
     return (
         <>
             <form className="form" onSubmit={onSubmit}>
-                <h1 className="title">Geo Locater</h1>
-                <p className="content">To find your longitude and latitude, enter your address.</p>
-                <input onChange={handleOnChange} type="text" name="location" placeholder="enter an IP address"></input><br></br>
+                <h1 className="title">Geo Locator</h1>
+                <p className="content">To find your latitude and longitude, enter your IP address.</p>
+                <input onChange={OnChange} type="text" name="location" placeholder="enter an IP address"></input><br></br>
                 <button className="submit" type="submit">Submit</button>
             </form>
-            <div className="result">
-                <h2>Latitude: {location.latitude}</h2><br></br>
-                <h2>Longitude: {console.log(location.longitude)}</h2>
+            <div className="location">
+                <h2 className="location--heading">Latitude: {location.latitude}</h2><br></br>
+                <h2 className="location--heading">Longitude: {location.longitude}</h2>
             </div>
         </>
     )
