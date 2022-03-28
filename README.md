@@ -2,13 +2,13 @@
 
 
 # Overview
-* [Description](https://github.com/rachel-padworski/censys-app-frontend#about)
+* [About](https://github.com/rachel-padworski/censys-app-frontend#about)
 * [Installation](https://github.com/rachel-padworski/censys-app-frontend#installation)
 * [Usage](https://github.com/rachel-padworski/censys-app-frontend#usage)
 * [Contributing](https://github.com/rachel-padworski/censys-app-frontend#contributing)
 * [License](https://github.com/rachel-padworski/censys-app-frontend#license)
 
-# About
+## About
 The frontend Geo Locator is a form that takes in an IP Address and returns the latitude and longitude. It was built using React and an API that reads the GeoLite2 database - [here](https://github.com/rachel-padworski/api-geo-locator).
 
 ## Installation
