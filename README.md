@@ -1,7 +1,7 @@
 # Geo Locator Frontend README
 
 
-# Overview
+## Overview
 * [About](https://github.com/rachel-padworski/censys-app-frontend#about)
 * [Installation](https://github.com/rachel-padworski/censys-app-frontend#installation)
 * [Usage](https://github.com/rachel-padworski/censys-app-frontend#usage)
