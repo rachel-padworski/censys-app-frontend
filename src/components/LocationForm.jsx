@@ -19,9 +19,9 @@ export default function LocationForm() {
         setLocation(location);
     };
 
-    const onFocus = (e) => {
-        e.target.placeholder('');
-    }
+    // const onFocus = (e) => {
+    //     e.target.placeholder('');
+    // }
 
 
     return (
